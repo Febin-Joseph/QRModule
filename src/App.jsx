@@ -87,7 +87,7 @@ function App() {
           }
         />
         <Route
-          path="/home-page/1/2"
+          path="/home-page/:city/:companyName"
           element={
             <HomePage onPhoneNumberSubmit={handlePhoneNumberSubmit} />
           }

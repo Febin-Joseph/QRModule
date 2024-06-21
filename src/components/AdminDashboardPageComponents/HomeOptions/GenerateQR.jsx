@@ -116,7 +116,7 @@ const GenerateQR = ({
   const handlePackageChange = (e, packageName) => {
     onPackagesChange({ ...packages, [packageName]: e.target.value });
   };
-  const qrCodeValue = `https://qr-module.vercel.app/home-page/${city}/${companyName}`;
+  const qrCodeValue = `/home-page/${city}/${companyName}`;
 
   return (
     <main className="main-container">
