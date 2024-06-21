@@ -269,7 +269,7 @@ const GenerateQR = ({
           <QRCode
             size={256}
             style={{ height: "auto", maxWidth: "100%", width: "100%" }}
-            value={isQRReady ? qrCodeValue : ""}
+            value={isQRReady ? `https://qr-module.vercel.app${qrCodeValue}` : ""}
             viewBox={`0 0 256 256`}
           />
 
@@ -277,7 +277,7 @@ const GenerateQR = ({
             style={{ color: "purple", cursor: "pointer" }}
             onClick={() => window.open(qrCodeValue, "_blank")}
           >
-            https://https://qr-module.vercel.app{qrCodeValue}
+            https://qr-module.vercel.app{qrCodeValue}
           </a>
 
           {!isQRReady && (
