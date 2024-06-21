@@ -121,7 +121,7 @@ const GenerateQR = ({
   };
 
   const handleNavigate = () => {
-    navigate(`/home-page/${city}/${companyName}`);
+    window.open(`/home-page/${city}/${companyName}`);
   };
 
   const qrCodeValue = `/home-page/${city}/${companyName}`;
