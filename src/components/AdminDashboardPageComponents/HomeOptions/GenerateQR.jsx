@@ -92,7 +92,7 @@ const GenerateQR = ({
     ) {
       try {
         const response = await axios.post(
-          "https://pavancheckmedbackend-2.onrender.com/api/generateqr",
+          "https://qr-module.vercel.app/api/generateqr",
           {
             city,
             companyName,
