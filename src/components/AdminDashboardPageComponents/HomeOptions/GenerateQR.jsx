@@ -8,7 +8,6 @@ import axios from "axios";
 import "./GenerateQRCss.css";
 import QRCode from "react-qr-code";
 import { FaHandPointDown } from "react-icons/fa";
-import { useNavigate } from "react-router-dom";
 
 const GenerateQR = ({
   city,
@@ -22,8 +21,6 @@ const GenerateQR = ({
   const [isQRReady, setIsQRReady] = useState(false);
   const inputRef = useRef(null);
   const suggestionBoxRef = useRef(null);
-
-  const navigate = useNavigate();
 
   useEffect(() => {
     const handleClickOutside = (event) => {
@@ -118,10 +115,6 @@ const GenerateQR = ({
 
   const handlePackageChange = (e, packageName) => {
     onPackagesChange({ ...packages, [packageName]: e.target.value });
-  };
-
-  const handleNavigate = () => {
-    navigate(`/home-page/${city}/${companyName}`);
   };
 
   const qrCodeValue = `/home-page/${city}/${companyName}`;
@@ -282,9 +275,9 @@ const GenerateQR = ({
 
           <a
             style={{ color: "purple", cursor: "pointer" }}
-            onClick={handleNavigate}
+            onClick={() => window.open(qrCodeValue, "_blank")}
           >
-            https://qr-module.vercel.app{qrCodeValue}
+            https://https://qr-module.vercel.app{qrCodeValue}
           </a>
 
           {!isQRReady && (
