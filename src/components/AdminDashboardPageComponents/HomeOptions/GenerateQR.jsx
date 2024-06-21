@@ -92,7 +92,7 @@ const GenerateQR = ({
     ) {
       try {
         const response = await axios.post(
-          "https://qr-module.vercel.app/api/generateqr",
+          "https://pavancheckmedbackend-2.onrender.com/api/generateqr",
           {
             city,
             companyName,
@@ -116,7 +116,7 @@ const GenerateQR = ({
   const handlePackageChange = (e, packageName) => {
     onPackagesChange({ ...packages, [packageName]: e.target.value });
   };
-  const qrCodeValue = `https://checkmedqrmodule.netlify.app/home-page/${city}/${companyName}`;
+  const qrCodeValue = `https://qr-module.vercel.app/home-page/${city}/${companyName}`;
 
   return (
     <main className="main-container">
